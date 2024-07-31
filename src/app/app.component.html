@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="password-validator">
+    <h2>Validador de Senha</h2>
+    <input 
+      type="password" 
+      placeholder="Digite sua senha" 
+      [(ngModel)]="password"
+    />
+    <button (click)="validatePassword()">Enviar</button>
+    <div class="message">{{ validationMessage }}</div>
+  </div>
+</div>
