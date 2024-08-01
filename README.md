@@ -122,3 +122,19 @@ Para dúvidas e sugestões, sinta-se à vontade para abrir uma issue ou entrar e
 **Premissas:**
 - As senhas não contêm espaços em branco.
 - Caracteres especiais são limitados a !@#$%^&*()-+.
+
+**VÍDEO RODANDO APLICAÇÃO**
+
+https://github.com/user-attachments/assets/c09f3b44-a156-4f29-8cf6-3a75451e2e72
+
+
+**Boas Práticas utilizadas!**
+
+Princípios SOLID: Single Responsibility Principle (SRP), Open/Closed Principle (OCP), Liskov Substitution Principle (LSP), Interface Segregation Principle (ISP), Dependency Inversion Principle (DIP).
+
+Princípios SOLID utilizados: SRP: Cada classe tem uma única responsabilidade. OCP: Código pode ser estendido sem modificar o existente. DIP: Uso de injeção de dependências no Spring Boot.
+
+Boas Práticas: Legibilidade: Código fácil de ler e entender. Modularidade: Lógica separada em funções pequenas. Documentação: Projeto documentado detalhadamente no README.md. Separation of Concerns: Separação entre backend e frontend.
+
+
+
