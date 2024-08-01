@@ -1,27 +1,124 @@
-# CaseItauFront
+# Validation-Password-Case-Itau
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+## Descrição
+Esse projeto é um validador de senha. Ele verifica se uma senha é válida conforme critérios específicos fornecidos no desafio técnico. O projeto é composto por um backend desenvolvido em Java com Spring Boot e um frontend em Angular.
 
-## Development server
+## Repositórios
+- Backend: [case-itau-back](https://github.com/seu-usuario/case-itau-back)
+- Frontend: [case-itau-front](https://github.com/seu-usuario/case-itau-front)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requisitos do Projeto
+- Java 17
+- Angular
+- Maven
+- Spring Boot
+- Node.js e npm
+- Testes Unitários
 
-## Code scaffolding
+## Instalação
+### Backend
+1. **Clone o repositório:**
+    ```
+    git clone https://github.com/seu-usuario/case-itau-back.git
+    ```
+2. **Navegue até o diretório do backend:**
+    ```
+    cd case-itau-back
+    ```
+3. **Instale as dependências com Maven:**
+    ```
+    mvn clean install
+    ```
+4. **Execute a aplicação:**
+    ```
+    mvn spring-boot:run
+    ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Frontend
+1. **Clone o repositório:**
+    ```
+    git clone https://github.com/seu-usuario/case-itau-front.git
+    ```
+2. **Navegue até o diretório do frontend:**
+    ```
+    cd case-itau-front
+    ```
+3. **Instale as dependências com npm:**
+    ```
+    npm install
+    ```
+4. **Execute a aplicação:**
+    ```
+    ng serve
+    ```
 
-## Build
+## Uso
+### Backend
+Após instalar e iniciar o backend, ele estará disponível em `http://localhost:8080`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Frontend
+Após instalar e iniciar o frontend, ele estará disponível em `http://localhost:4200`.
 
-## Running unit tests
+### Endpoints da API
+- **POST /api/validate-password**: Valida se a senha fornecida é válida.
+  - **Input:** `{"password": "suaSenha"}`
+  - **Output:** `{"isValid": true}` ou `{"isValid": false}`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Exemplo de Uso
+Para validar uma senha, faça uma requisição POST para `http://localhost:8080/api/validate-password` com o seguinte payload:
+{
+"password": "AbTp9!fok"
+}
 
-## Running end-to-end tests
+css
+Copiar código
+A resposta será:
+{
+"isValid": true
+}
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+less
+Copiar código
 
-## Further help
+## Funcionalidades
+A funcionalidade principal do projeto é validar se uma senha atende aos seguintes critérios:
+- Nove ou mais caracteres
+- Ao menos 1 número
+- Ao menos 1 letra minúscula
+- Ao menos 1 letra maiúscula
+- Ao menos 1 caractere especial (!@#$%^&*()-+)
+- Não possuir caracteres repetidos dentro do conjunto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Contribuição
+Contribuições são bem-vindas! Para contribuir, por favor, siga as etapas abaixo:
+1. Faça um fork do projeto.
+2. Crie uma nova branch: `git checkout -b minha-nova-feature`
+3. Faça suas modificações e commit: `git commit -m 'Adiciona nova feature'`
+4. Envie para a branch original: `git push origin minha-nova-feature`
+5. Crie um pull request.
+
+## Licença
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
+
+## Considerações Finais
+O projeto foi desenvolvido com foco em Clean Code, princípios SOLID, e boas práticas de desenvolvimento. As decisões de design foram tomadas para garantir a extensibilidade e manutenibilidade do código.
+
+Para dúvidas e sugestões, sinta-se à vontade para abrir uma issue ou entrar em contato.
+
+---
+
+**Instruções Básicas para Executar o Projeto:**
+- Clone os repositórios do backend e frontend.
+- Instale as dependências do backend e frontend.
+- Execute o backend e o frontend.
+- Acesse a aplicação em `http://localhost:4200`.
+
+**Decisões e Racional:**
+- Utilização de Java e Spring Boot para o backend devido à robustez e familiaridade com a linguagem.
+- Angular foi escolhido para o frontend por sua capacidade de criar interfaces dinâmicas e reativas.
+- Testes unitários e de integração foram implementados para garantir a qualidade do código.
+- O design da API segue padrões RESTful para facilitar a integração com outros sistemas.
+
+**Premissas:**
+- As senhas não contêm espaços em branco.
+- Caracteres especiais são limitados a !@#$%^&*()-+.
